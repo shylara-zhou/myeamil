@@ -1,0 +1,356 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\SMTP.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\SMTP.ico"
+
+IDI_ICON1               ICON                    "res\\friend.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 SMTP"
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "SMTP 邮件服务器",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           " JMU CEC",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,171,21,50,14,WS_GROUP
+END
+
+IDD_SMTP_DIALOG DIALOGEX 0, 0, 608, 348
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "SMTP邮件客户端"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_COMBO_SERVER,169,14,73,44,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP,WS_EX_STATICEDGE
+    EDITTEXT        IDC_ACCOUNT,49,17,106,12,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD,49,35,106,12,ES_RIGHT | ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_SEND_NAME,67,63,177,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RCV_ADDRESS,67,81,177,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SUBJECT,67,101,177,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "添加",IDC_ADDFILE,185,121,33,17
+    EDITTEXT        IDC_CONTENT,23,179,225,130,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+    PUSHBUTTON      "发送邮件",IDSEND,98,317,63,22
+    LTEXT           "账号",IDC_STATIC,23,19,19,12,0,WS_EX_TRANSPARENT
+    LTEXT           "密码",IDC_STATIC,23,35,19,12,0,WS_EX_TRANSPARENT
+    LTEXT           "发件人",IDC_STATIC,26,67,40,12
+    LTEXT           "收件人",IDC_STATIC,26,85,28,12
+    LTEXT           "主题",IDC_STATIC,26,103,20,12
+    LTEXT           "附件",IDC_STATIC,26,123,20,12
+    COMBOBOX        IDC_COMBO_FILE,67,121,113,68,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "删除",IDC_DELETE,222,121,33,17
+    GROUPBOX        "邮件头",IDC_STATIC,16,53,241,106
+    GROUPBOX        "邮件内容",IDC_STATIC,16,163,241,150
+    PUSHBUTTON      "获取邮件",IDC_GETEMAIL,295,19,57,27
+    GROUPBOX        "",IDC_STATIC,15,7,241,45
+    PUSHBUTTON      "登陆邮箱",IDC_LOGIN,168,29,75,20
+    CONTROL         "List3",IDC_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,282,53,303,243,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "黑名单",IDC_BlackList,396,19,65,27
+    PUSHBUTTON      "好友列表",IDC_FriendList,508,18,65,27
+    EDITTEXT        IDC_RCV_ADDRESS2,66,142,177,12,ES_AUTOHSCROLL
+    CONTROL         "抄送",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,27,142,31,10
+END
+
+IDD_CONTENT_DIALOG DIALOGEX 0, 0, 358, 222
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "邮件内容"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_CONTENT,14,16,327,185,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL | WS_HSCROLL,WS_EX_CLIENTEDGE
+END
+
+IDD_DIALOG_BlackList DIALOGEX 0, 0, 299, 143
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "黑名单"
+FONT 10, "System", 0, 0, 0x0
+BEGIN
+    LISTBOX         IDC_LIST_BlackList,19,17,100,116,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "添加",IDC_BUTTON_ADD,144,101,41,28
+    PUSHBUTTON      "删除",IDC_BUTTON_DELETE,229,100,41,28
+    EDITTEXT        IDC_EDIT1,137,72,142,20,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_FriendList DIALOGEX 0, 0, 310, 143
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "好友名单"
+FONT 10, "System", 0, 0, 0x0
+BEGIN
+    ICON            IDI_ICON1,IDC_STATIC,197,35,16,16
+    LISTBOX         IDC_LIST_FriendList,19,17,100,116,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "添加好友",IDC_BUTTON_ADD2,142,99,45,20
+    PUSHBUTTON      "删除好友",IDC_BUTTON_DELETE2,227,98,50,20
+    EDITTEXT        IDC_EDIT1,130,67,164,22,ES_AUTOHSCROLL
+END
+
+IDD_LOGIN DIALOGEX 0, 0, 310, 177
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "登录"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,143,16,18,16
+    DEFPUSHBUTTON   "登录",IDOK,70,149,50,14
+    DEFPUSHBUTTON   "注册",IDRE,125,149,50,14
+    PUSHBUTTON      "退出",IDCANCEL,182,149,50,14
+    EDITTEXT        IDC_U_USERNAME,99,40,121,12,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_U_PASSWORD,99,57,121,12,ES_RIGHT | ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "账号",IDC_STATIC,69,42,22,12,0,WS_EX_TRANSPARENT
+    LTEXT           "密码",IDC_STATIC,69,57,22,12,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_U_USERNAME2,99,75,121,12,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_U_PASSWORD2,99,92,121,12,ES_RIGHT | ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "邮箱",IDC_STATIC,69,77,22,12,0,WS_EX_TRANSPARENT
+    LTEXT           "授权码",IDC_STATIC,69,92,28,12,0,WS_EX_TRANSPARENT
+    LTEXT           "已注册用户不用填写授权码",IDC_STATIC,183,133,120,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "FileDescription", "SMTP Microsoft 基础类应用程序"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "SMTP"
+            VALUE "OriginalFilename", "SMTP.EXE"
+            VALUE "ProductName", "SMTP 应用程序"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_SMTP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 601
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 341
+    END
+
+    IDD_CONTENT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 351
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 215
+    END
+
+    IDD_DIALOG_BlackList, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 132
+        TOPMARGIN, 7
+    END
+
+    IDD_DIALOG_FriendList, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 132
+        TOPMARGIN, 7
+    END
+
+    IDD_LOGIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 303
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "res\\1.bmp"
+
+IDB_BITMAP4             BITMAP                  "res\\1.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_SMTP_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_FriendList AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_BlackList AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_FRIEND_LIST AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_LOGIN AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_CONTENT_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "关于 SMTP"
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\SMTP.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
